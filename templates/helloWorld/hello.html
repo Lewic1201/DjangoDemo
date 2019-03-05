@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>helloworld</title>
+    {% extends "base.html" %}
+</head>
+<body>
+<h1>{{ hello }}</h1>
+<!--
+{# 这是一个注释 #}
+{# 两种if标签 #}
+{% if condition %}
+     ... display
+{% endif %}
+
+{% if condition1 %}
+   ... display 1
+{% elif condition2 %}
+   ... display 2
+{% else %}
+   ... display 3
+{% endif %}
+
+{# 管道符和linux作用一样,作为数据的过滤器#}
+{{ name|lower }} 将变量name小写化
+{{ my_list|first|upper }} 将第一个元素并将其转化为大写
+{{ bio|truncatewords:"30" }} 显示变量 bio 的前30个词
+{{ pub_date|date:"F j, Y" }}
+
+
+模板继承
+{% include "nav.html" %}
+
+{% block mainbody %}
+<p>继承了 base.html 文件</p>
+{% endblock %}
+-->
+</body>
+</html>

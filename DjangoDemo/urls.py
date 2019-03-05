@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+from helloWorld import views, testdb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    url(r'^hello$', views.hello),
+    url(r'^hello2$', views.hello2),
+
+    url(r'^testdb$', testdb.testdb),
 ]
